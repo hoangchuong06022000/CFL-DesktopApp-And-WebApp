@@ -1,0 +1,141 @@
+﻿@model Model.Model.DSTHISINHTHEOPHONG
+@{
+    ViewBag.Title = "ViewCertification";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="sidebar" data-color="white" data-active-color="danger">
+    <div class="logo">
+        <a href="https://localhost:44352/" class="simple-text logo-mini">
+            <div class="logo-image-small">
+                <img src="../assets/img/logo-small.png">
+            </div>
+        </a>
+        <a href="https://localhost:44352/" class="simple-text logo-normal">
+            TT NGOẠI NGỮ
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="active-pro">
+                <a href="https://localhost:44352/">
+                    <i class='fa fa-sign-in'></i>
+                    <p>Đăng ký thi</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/InfoThiSinh/Search">
+                    <i class='fa fa-info'></i>
+                    <p>Thông tin thí sinh</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="https://localhost:44352/Certification/Search">
+                    <i class='fa fa-certificate'></i>
+                    <p>Chứng nhận</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/Examinee/Examinee">
+                    <i class='fa fa-list'></i>
+                    <p>DS thí sinh dự thi</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/Statictic/Statictic">
+                    <i class="fa fa-line-chart"></i>
+                    <p>Thống kê</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main-panel">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <div class="navbar-toggle">
+                    <button type="button" class="navbar-toggler">
+                        <span class="navbar-toggler-bar bar1"></span>
+                        <span class="navbar-toggler-bar bar2"></span>
+                        <span class="navbar-toggler-bar bar3"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand" href="javascript:;">NHẬP VÀO SỐ BÁO DANH</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        @using (Html.BeginForm("Certification", "Certification", FormMethod.Post))
+                        {
+                            <input type="text" name="sbd" placeholder="Tìm kiếm..." value="@ViewBag.StrSearch" />
+                            <button type="submit" class="btn btn-default"><i class="nc-icon nc-zoom-split"></i></button>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card card-plain">
+                    <div class="card-header">
+                        <h4 class="card-title">Chứng Nhận Kết Quả</h4>
+                    </div>
+                    <div class="card-body" style="background-image: url(../../assets/img/certificate_re.jpg); background-repeat:no-repeat; background-size:contain;">
+                        <div style="text-align:center; margin-top:25px;">
+                            <h5>SOCIALIST REPUBLIC OF VIETNAM</h5>
+                            <h6>Independence - Freedom - Happiness</h6>
+                            <hr style="width:300px" />
+                            <h5 style="color:red;">CERTIFICATE OF PROFICIENCY</h5>
+                            <h6>In: ENGLISH</h6>
+                            <h6>Level: @Html.DisplayFor(x => x.PHONGTHI.TRINHDO)</h6>
+                            <h5>HCM CENTER OF FOREIGN LANGUAGE</h5>
+                            <p style="font-weight:bold;">This is to certify that</p>
+                        </div>
+                        <div style="margin-bottom: 100px; margin-left: 120px; font-size: 20px; color: black;">
+                            <div>
+                                <label style="font-size: 20px; color: black;">
+                                    Full Name: </labelstyle="margin-left:>
+                                    @Html.DisplayFor(x => x.THISINH.HOTEN)
+                            </div>
+                            <div>
+                                <label style="font-size: 20px; color: black;">Date of birth: </label>
+                                @Html.DisplayFor(x => x.THISINH.NGAYSINH)
+                            </div>
+                            <div style="width:700px;">
+                                <p>Has taken the Foreign Language Proficiency Assessment Exam based on Foreign Language Proficiency Framework for Vietnam</p>
+                            </div>
+                            <div>
+                                <label style="font-size: 20px; color: black;">Date of Exam: </label>
+                                @Html.DisplayFor(x => x.PHONGTHI.KHOATHI.NGAYTHI)
+                            </div>
+                            <div>
+                                <label style="font-size: 20px; color: black;">Listening: </label>
+                                @Html.DisplayFor(x => x.DIEMNGHE)
+                                <label style="font-size: 20px; color: black; margin-left:100px;">Reading: </label>
+                                @Html.DisplayFor(x => x.DIEMDOC)
+                            </div>
+                            <div>
+                                <label style="font-size: 20px; color: black;">Speaking: </label>
+                                @Html.DisplayFor(x => x.DIEMNOI)
+                                <label style="font-size: 20px; color: black; margin-left:100px;">Writting: </label>
+                                @Html.DisplayFor(x => x.DIEMVIET)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

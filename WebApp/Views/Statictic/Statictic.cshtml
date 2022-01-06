@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "Statictic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="sidebar" data-color="white" data-active-color="danger">
+    <div class="logo">
+        <a href="https://localhost:44352/" class="simple-text logo-mini">
+            <div class="logo-image-small">
+                <img src="../assets/img/logo-small.png">
+            </div>
+        </a>
+        <a href="https://localhost:44352/" class="simple-text logo-normal">
+            TT NGOẠI NGỮ
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="active-pro">
+                <a href="https://localhost:44352/">
+                    <i class='fa fa-sign-in'></i>
+                    <p>Đăng ký thi</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/InfoThiSinh/Search">
+                    <i class='fa fa-info'></i>
+                    <p>Thông tin thí sinh</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/Certification/Search">
+                    <i class='fa fa-certificate'></i>
+                    <p>Chứng nhận</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/Examinee/Examinee">
+                    <i class='fa fa-list'></i>
+                    <p>DS thí sinh dự thi</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="https://localhost:44352/Statictic/Statictic">
+                    <i class="fa fa-line-chart"></i>
+                    <p>Thống kê</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main-panel">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <div class="navbar-toggle">
+                    <button type="button" class="navbar-toggler">
+                        <span class="navbar-toggler-bar bar1"></span>
+                        <span class="navbar-toggler-bar bar2"></span>
+                        <span class="navbar-toggler-bar bar3"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand" href="javascript:;">THỐNG KÊ</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box bg-info" style="border-radius: 10px;">
+                                    <div class="inner">
+                                        <h3 style="margin-left: 13px;font-size: 40px; font-family:Verdana;">@ViewBag.SLKHOATHI</h3>
+                                        <p style="margin-left: 13px; font-family: Verdana; font-weight: bold; font-size: 15px; ">Khoá Thi</p>
+                                    </div>
+                                    <div class="icon" style=" font-size: 90px; position: absolute; right: 26px; top: -22px; color: white;">
+                                        <i class="fa fa-tasks"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box bg-success" style="border-radius: 10px;">
+                                    <div class="inner">
+                                        <h3 style="margin-left: 13px;font-size: 40px; font-family:Verdana;">@ViewBag.SLPHONGTHI</h3>
+                                        <p style="margin-left: 13px; font-family: Verdana; font-weight: bold; font-size: 15px; ">Phòng thi </p>
+                                    </div>
+                                    <div class="icon" style=" font-size: 90px; position: absolute; right: 26px; top: -22px; color: white;">
+                                        <i class="fa fa-dashboard"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box bg-warning" style="border-radius: 10px;">
+                                    <div class="inner">
+                                        <h3 style="margin-left: 13px;font-size: 40px; font-family:Verdana;">@ViewBag.SLTHISINHA2</h3>
+                                        <p style="margin-left: 13px; font-family: Verdana; font-weight: bold; font-size: 15px; ">Thí sinh trình độ A2</p>
+                                    </div>
+                                    <div class="icon" style=" font-size: 90px; position: absolute; right: 26px; top: -22px; color: white;">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="small-box bg-danger" style="border-radius: 10px;">
+                                    <div class="inner">
+                                        <h3 style="margin-left: 13px;font-size: 40px; font-family:Verdana;">@ViewBag.SLTHISINHB1</h3>
+                                        <p style="margin-left: 13px; font-family: Verdana; font-weight: bold; font-size: 15px; ">Thí sinh trình độ B1</p>
+                                    </div>
+                                    <div class="icon" style=" font-size: 90px; position: absolute; right: 26px; top: -22px; color: white;">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "InfoThiSinh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="sidebar" data-color="white" data-active-color="danger">
+    <div class="logo">
+        <a href="https://localhost:44352/" class="simple-text logo-mini">
+            <div class="logo-image-small">
+                <img src="../assets/img/logo-small.png">
+            </div>
+        </a>
+        <a href="https://localhost:44352/" class="simple-text logo-normal">
+            TT NGOẠI NGỮ
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="active-pro">
+                <a href="https://localhost:44352/">
+                    <i class='fa fa-sign-in'></i>
+                    <p>Đăng ký thi</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="https://localhost:44352/InfoThiSinh/Search">
+                    <i class='fa fa-info'></i>
+                    <p>Thông tin thí sinh</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/Certification/Search">
+                    <i class='fa fa-certificate'></i>
+                    <p>Chứng nhận</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/Examinee/Examinee">
+                    <i class='fa fa-list'></i>
+                    <p>DS thí sinh dự thi</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a href="https://localhost:44352/Statictic/Statictic">
+                    <i class="fa fa-line-chart"></i>
+                    <p>Thống kê</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main-panel">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <div class="navbar-toggle">
+                    <button type="button" class="navbar-toggler">
+                        <span class="navbar-toggler-bar bar1"></span>
+                        <span class="navbar-toggler-bar bar2"></span>
+                        <span class="navbar-toggler-bar bar3"></span>
+                    </button>
+                </div>
+                <a class="navbar-brand" href="javascript:;">TÌM KIẾM THÔNG TIN THÍ SINH BẰNG HỌ TÊN HOẶC SĐT</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+                <span class="navbar-toggler-bar navbar-kebab"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        @using (Html.BeginForm("ViewInfo", "InfoThiSinh", FormMethod.Post))
+                        {
+                            <input type="text" name="strSearch" placeholder="Tìm kiếm..." value="@ViewBag.StrSearch" />
+                            <button type="submit" class="btn btn-default"><i class="nc-icon nc-zoom-split"></i></button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
